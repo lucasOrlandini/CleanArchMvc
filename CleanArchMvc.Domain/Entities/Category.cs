@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace CleanArchMvc.Domain.Entities
 {
     public  sealed class Category : Entity //Garantido que essa classe não poderá ser herdada.
-    {
+    {  
         
         public string Name { get; private set; }
 
