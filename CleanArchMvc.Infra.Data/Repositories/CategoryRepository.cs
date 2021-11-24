@@ -33,7 +33,7 @@ namespace CleanArchMvc.Infra.Data.Repositories
             return await _categoryContext.Categories.ToListAsync(); //Vou retornar uma lista de categoria.
         }
 
-        public async Task<Category> Remove(Category category)
+        public async Task<Category> RemoveAsync(Category category)
         {
             _categoryContext.Remove(category);
             await _categoryContext.SaveChangesAsync();
