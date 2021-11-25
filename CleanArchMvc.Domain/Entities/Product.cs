@@ -63,6 +63,6 @@ namespace CleanArchMvc.Domain.Entities
 
         
         public Category Category { get; private set; } // Relaciona categoria com produto.
-        public int CategoryId { get; private set; }
+        public int CategoryId { get;  set; }
     }
 }
