@@ -1,8 +1,5 @@
 ﻿using CleanArchMvc.Application.DTOs;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace CleanArchMvc.Application.Interfaces
@@ -11,7 +8,7 @@ namespace CleanArchMvc.Application.Interfaces
     {
         Task<IEnumerable<ProductDTO>> GetProducts(); //Retornando uma lista de categorie DTO
         Task<ProductDTO> GetById(int? id); //Retornar um objeto products DTO por ID
-        Task<ProductDTO> GetProductCategory(int? id);
+        //Task<ProductDTO> GetProductCategory(int? id);
         Task Add(ProductDTO productDTO);
         Task Update(ProductDTO productDTO);
         Task Remove(int? id);

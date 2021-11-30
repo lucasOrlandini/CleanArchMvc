@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CleanArchMvc.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -41,5 +42,9 @@ namespace CleanArchMvc.Application.DTOs
         [MaxLength(250)]
         [DisplayName("Image")]
         public string Image { get; set; }
+        public Category Category { get; set; }
+
+        [DisplayName("Categories")]
+        public int CategoryId { get; set; }
     }
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace CleanArchMvc.Application.Products.Queries
 {
     
-    public class GetProductQuery : IRequest <IEnumerable<Product>> //Vai retornar uma lista de produtos
+    public class GetProductsQuery : IRequest <IEnumerable<Product>> //Vai retornar uma lista de produtos
     {
     }
 }

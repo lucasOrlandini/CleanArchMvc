@@ -1,5 +1,4 @@
-﻿@model IEnumerable<CleanArchMvc.Application.DTOs.CategoryDTO>
-
+﻿@model IEnumerable<CleanArchMvc.Application.DTOs.CategoryDTO> 
 @{
     ViewData["Title"] = "Categories Management";
 }
@@ -39,7 +38,7 @@
             {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Name)
+                        @Html.DisplayFor(modelItem => item.Name) 
                     </td>
                     <td>
                         <a asp-action="Edit" asp-route-id="@item.Id" title="Edit" class="btn btn-warning">

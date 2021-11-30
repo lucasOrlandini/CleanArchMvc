@@ -4,18 +4,15 @@ using CleanArchMvc.Application.Services;
 using CleanArchMvc.Domain.Interfaces;
 using CleanArchMvc.Infra.Data.Context;
 using CleanArchMvc.Infra.Data.Repositories;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CleanArchMvc.Infra.IoC
 {
-   public static class DependencyInjection
+    public static class DependencyInjection
     {
         //Método de extensão.
         public static IServiceCollection AddInfrastructure(this IServiceCollection services,
@@ -31,6 +28,10 @@ namespace CleanArchMvc.Infra.IoC
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddAutoMapper(typeof(DomainDTOMappingProfile));
+
+            //obter assendle
+            var myhandle = AppDomain.CurrentDomain.Load("CleanArchMvc.Application"); //Meus Handles são definidos aqui
+            services.AddMediatR(myhandle);
 
 
             return services;
