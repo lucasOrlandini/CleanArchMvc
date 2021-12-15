@@ -108,6 +108,7 @@ namespace CleanArchMvc.WebUI.Controllers
             var wwwroot = _environment.WebRootPath;
             var image = Path.Combine(wwwroot, "images\\" + productDTO.Image);
             var exists = System.IO.File.Exists(image);
+            ViewBag.ImageExist = exists;
 
             return View(productDTO);
         }
